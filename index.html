@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joyce Hotel | Comfortable stays in the heart of Mubende</title>
+  <meta name="description" content="Book direct at Joyce Hotel for the best rate, a free welcome drink, fast Wi-Fi, parking and a central city location. Deluxe rooms, executive rooms and suites.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <!-- HERO + AVAILABILITY WIDGET -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="stack">
+          <h1 id="hero-title">Experience calm comfort in the heart of the city</h1>
+          <p class="lead">Spacious rooms, fast Wi-Fi and warm 24-hour service, minutes from business, dining and transport.</p>
+          <p>
+            <a class="btn btn--soft" href="booking.html">Book your Stay</a>
+            <a class="btn btn--ghost" href="rooms.html" style="color: var(--white); border-color: var(--white);">Explore rooms</a>
+          </p>
+        </div>
+
+        <!-- Handled by booking.js (strict validation). Works as a plain GET form to booking.html. -->
+        <form id="search-form" class="search-card" action="booking.html" method="get" data-availability-form>
+          <h2>Check availability</h2>
+          <div class="form-alert form-alert--error hidden" data-form-alert role="alert"></div>
+          <div class="form-grid mt-2">
+            <div class="field">
+              <label for="s-checkIn">Check-in</label>
+              <input type="date" id="s-checkIn" name="checkIn" required>
+              <span class="field-error" data-error-for="checkIn" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="s-checkOut">Check-out</label>
+              <input type="date" id="s-checkOut" name="checkOut" required>
+              <span class="field-error" data-error-for="checkOut" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="s-adults">Adults</label>
+              <input type="number" id="s-adults" name="adults" min="1" max="6" step="1" value="1" inputmode="numeric" required>
+              <span class="field-error" data-error-for="adults" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="s-children">Children</label>
+              <input type="number" id="s-children" name="children" min="0" max="4" step="1" value="0" inputmode="numeric" required>
+              <span class="field-hint">Ages 0 to <span data-cfg="booking.maxChildAge"></span>. Ages are collected next.</span>
+              <span class="field-error" data-error-for="children" role="alert"></span>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--block mt-2" type="submit">Check availability</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Why stay with us">
+      <div class="container">
+        <ul role="list">
+          <li><span class="trust-icon" aria-hidden="true">📶</span>Free high-speed Wi-Fi</li>
+          <li><span class="trust-icon" aria-hidden="true">🚗</span>Free guest parking</li>
+          <li><span class="trust-icon" aria-hidden="true">🛎️</span>24-hour reception</li>
+          <li><span class="trust-icon" aria-hidden="true">✅</span>Best rate when you book direct</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="container grid split">
+        <div class="stack">
+          <h2 id="about-title">Welcome to <span data-cfg="hotel.name"></span></h2>
+          <p class="lead">Stay in the centre of it all. We are a short walk from offices, attractions and the main transport links, so your time goes to the city rather than the commute.</p>
+          <p>Every room is designed for rest: supportive beds, quiet air conditioning, blackout curtains and a proper desk. Our team is on hand around the clock, whether you are in town for a meeting or a weekend away.</p>
+          <p><a class="btn btn--ghost" href="about.html">Our story</a></p>
+        </div>
+        <div class="stack">
+          <article class="amenity">
+            <span class="amenity-icon" aria-hidden="true">📍</span>
+            <h3>Central location</h3>
+            <p>Walk to business, dining and transport. Airport shuttle available on request.</p>
+          </article>
+          <article class="amenity">
+            <span class="amenity-icon" aria-hidden="true">🛎️</span>
+            <h3>Service around the clock</h3>
+            <p>Reception is staffed 24 hours, with flexible late check-in.</p>
+          </article>
+          <article class="amenity">
+            <span class="amenity-icon" aria-hidden="true">✅</span>
+            <h3>Best rate when you book direct</h3>
+            <p>Book with us for a rate guarantee and a free welcome drink.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ROOMS -->
+    <section class="section section--sage" aria-labelledby="rooms-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="rooms-title">Rooms and suites</h2>
+          <p class="lead">Choose the space that suits your stay. Rates are per room, per night.</p>
+        </div>
+        <div class="grid grid--rooms" data-render="featured-rooms" data-limit="3"></div>
+        <p class="mt-3"><a class="btn btn--primary" href="rooms.html">View all rooms</a></p>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="section" aria-labelledby="amenities-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="amenities-title">Everything you need, clearly priced</h2>
+          <p class="lead">We show what is included and what carries an extra charge, so there are no surprises at checkout.</p>
+        </div>
+        <div class="grid grid--amenities" data-render="amenities"></div>
+        <p class="mt-3"><a class="btn btn--ghost" href="amenities.html">All amenities and services</a></p>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--sage" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reviews-title">What our guests say</h2>
+        </div>
+        <div class="grid grid--reviews" data-render="reviews"></div>
+      </div>
+    </section>
+
+    <!-- DIRECT BOOKING -->
+    <section class="section section--forest" aria-labelledby="direct-title">
+      <div class="container text-center stack">
+        <h2 id="direct-title">Book direct and enjoy more</h2>
+        <p class="lead" style="margin-inline: auto; color: var(--sage-100);">Best rate guaranteed, a free welcome drink and flexible service from the team who will welcome you.</p>
+        <p>
+          <a class="btn btn--soft" href="booking.html">Book your stay</a>
+          <a class="btn btn--ghost" href="#" data-link="whatsapp" style="color: var(--white); border-color: var(--white);">Chat on WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
+</body>
+</html>
