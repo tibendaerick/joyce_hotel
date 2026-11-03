@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Joyce Hotel</title>
+  <meta name="description" content="Learn about Joyce Hotel, our values and our central city location close to transport, dining and attractions.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container stack">
+        <h1 id="page-title">About <span data-cfg="hotel.name"></span></h1>
+        <p class="lead" data-cfg="hotel.tagline"></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <h2 id="story-title">Our story</h2>
+        <div class="prose" data-render="about-story"></div>
+      </div>
+    </section>
+
+    <section class="section section--sage" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="values-title">What We Stand For</h2>
+        </div>
+        <div class="grid grid--amenities" data-render="about-values"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="find-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="find-title">Find Us</h2>
+          <p class="lead"><span data-cfg="hotel.addressLine1"></span>, <span data-cfg="hotel.addressLine2"></span></p>
+        </div>
+        <div class="grid grid--amenities" data-render="proximity"></div>
+        <p class="mt-3">
+          <a class="btn btn--primary" href="#" data-link="map">Open in Maps</a>
+          <a class="btn btn--ghost" href="contact.html">Contact and Directions</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--forest" aria-labelledby="cta-title">
+      <div class="container text-center stack">
+        <h2 id="cta-title">We would love to host YOU.</h2>
+        <p class="lead" style="margin-inline: auto; color: var(--sage-100);">Book direct for a rate guarantee and a free welcome drink.</p>
+        <p><a class="btn btn--soft" href="booking.html">Book your Stay</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

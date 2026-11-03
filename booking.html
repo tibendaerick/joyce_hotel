@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Your Stay | Joyce Hotel</title>
+  <meta name="description" content="Check availability and send your reservation request to Joyce Hotel. Book direct for the best rate and a free welcome drink.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container stack">
+        <h1 id="page-title">Book your Stay</h1>
+        <p class="lead">Tell us about your stay and send your reservation request on WhatsApp or by Email. We confirm availability and payment details by message.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container">
+
+        <!-- Simulator now, real booking engine later. Logic lives in booking.js (BookingService adapter).
+             Prefilled from the address: booking.html?checkIn=YYYY-MM-DD&checkOut=YYYY-MM-DD&adults=2&children=0&room=deluxe -->
+        <form id="booking-form" class="form-card form-card--wide" data-booking-form>
+          <h2 id="form-title" class="visually-hidden">Reservation Form</h2>
+          <div class="form-alert hidden" data-form-alert role="alert"></div>
+
+          <fieldset>
+            <legend>1. Your Stay</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="b-checkIn">Check-in</label>
+                <input type="date" id="b-checkIn" name="checkIn" required>
+                <span class="field-error" data-error-for="checkIn" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-checkOut">Check-out</label>
+                <input type="date" id="b-checkOut" name="checkOut" required>
+                <span class="field-error" data-error-for="checkOut" role="alert"></span>
+              </div>
+              <div class="field field--full">
+                <label for="b-room">Room Type</label>
+                <select id="b-room" name="room" data-render="room-options" required></select>
+                <span class="field-hint" data-occupancy-hint>Choose a room to see how many guests it sleeps.</span>
+                <span class="field-error" data-error-for="room" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-rooms">Number of Rooms</label>
+                <input type="number" id="b-rooms" name="rooms" min="1" max="3" step="1" value="1" inputmode="numeric" required>
+                <span class="field-error" data-error-for="rooms" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-adults">Adults</label>
+                <input type="number" id="b-adults" name="adults" min="1" max="3" step="1" value="2" inputmode="numeric" required>
+                <span class="field-error" data-error-for="adults" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-children">Children</label>
+                <input type="number" id="b-children" name="children" min="0" max="3" step="1" value="0" inputmode="numeric" required>
+                <span class="field-hint">Ages 0 to <span data-cfg="booking.maxChildAge"></span></span>
+                <span class="field-error" data-error-for="children" role="alert"></span>
+              </div>
+              <div class="field field--full hidden" data-child-ages-wrap role="group" aria-labelledby="b-ages-label">
+                <p id="b-ages-label"><strong>Age of each Child</strong></p>
+                <div class="child-ages" data-child-ages></div>
+                <span class="field-error" data-error-for="childAges" role="alert"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Extras</legend>
+            <div class="stack" data-render="extras"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Guest Details</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="b-fullName">Full name</label>
+                <input type="text" id="b-fullName" name="fullName" autocomplete="name" maxlength="80" required>
+                <span class="field-error" data-error-for="fullName" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-email">Email</label>
+                <input type="email" id="b-email" name="email" autocomplete="email" maxlength="120" required>
+                <span class="field-error" data-error-for="email" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-phone">Phone or WhatsApp number</label>
+                <input type="tel" id="b-phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="+256 700 000 000" required>
+                <span class="field-error" data-error-for="phone" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="b-arrivalTime">Expected arrival time (optional)</label>
+                <input type="time" id="b-arrivalTime" name="arrivalTime">
+                <span class="field-hint">Check-in is from <span data-cfg="hotel.checkInTime"></span>.</span>
+              </div>
+              <div class="field field--full">
+                <label for="b-requests">Special requests (optional)</label>
+                <textarea id="b-requests" name="requests" maxlength="500"></textarea>
+                <span class="field-error" data-error-for="requests" role="alert"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Review and send</legend>
+            <div class="summary" data-summary aria-live="polite">
+              <p>Choose your dates and room to see your total.</p>
+            </div>
+            <div class="field">
+              <label class="check" for="b-accept">
+                <input type="checkbox" id="b-accept" name="accept" required>
+                <span>I have read and accept the <a href="policies.html#terms" target="_blank" rel="noopener">terms of service</a> and the <a href="policies.html#refunds" target="_blank" rel="noopener">refund and cancellation policy</a>.</span>
+              </label>
+              <span class="field-error" data-error-for="accept" role="alert"></span>
+            </div>
+            <p class="field-hint">This sends a reservation request and is not confirmed until the hotel replies. No payment or card details are collected on this website.</p>
+            <div class="send-actions">
+              <button class="btn btn--whatsapp" type="submit" data-send="whatsapp">Send on WhatsApp</button>
+              <button class="btn btn--primary" type="submit" data-send="email">Send by Email</button>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+    </section>
+
+    <section class="section section--sage" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reviews-title">Why guests book direct</h2>
+        </div>
+        <div class="grid grid--reviews" data-render="reviews"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
+</body>
+</html>

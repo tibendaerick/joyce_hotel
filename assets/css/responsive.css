@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Joyce Hotel: responsive.css
+   Mobile-first: style.css is the 320px base; these layers ADD to it.
+   Breakpoints: 480 · 768 · 1024 · 1440, plus motion + print preferences.
+   ========================================================================== */
+
+/* >= 480px: large phones */
+@media (min-width: 480px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .child-ages { grid-template-columns: repeat(3, 1fr); }
+  .send-actions { grid-template-columns: 1fr 1fr; }
+}
+
+/* >= 768px: tablets */
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+  .grid--rooms, .grid--amenities, .grid--reviews { grid-template-columns: repeat(2, 1fr); }
+  .form-grid { grid-template-columns: repeat(2, 1fr); }
+  .search-card .form-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-main { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom .container { grid-template-columns: 1fr auto; align-items: center; }
+  .footer-credit { text-align: right; }
+  .gallery { grid-template-columns: repeat(4, 1fr); }
+  .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-4); align-items: start; }
+
+  /* Book bar becomes a floating pill so it stays persistent without a full-width strip */
+  .book-bar { inset: auto 1.5rem 1.5rem auto; border-radius: 999px; padding: 0.55rem 0.55rem 0.55rem 1.4rem; }
+  .book-bar p { display: none; }
+  .book-bar .btn { min-height: 2.6rem; }
+}
+
+/* >= 768px: trust strip in one row */
+@media (min-width: 768px) {
+  .trust-strip ul { grid-template-columns: repeat(4, 1fr); }
+  .trust-strip li { justify-content: center; }
+}
+
+/* >= 1024px: laptops, full horizontal navigation */
+@media (min-width: 1024px) {
+  .nav-toggle { display: none; }
+  .nav-menu {
+    position: static; display: flex; flex-direction: row; align-items: center; gap: 0.25rem;
+    padding: 0; background: none; border: 0; box-shadow: none;
+  }
+  .nav-link { padding: 0.55rem 0.9rem; }
+  .nav-cta { display: inline-flex; }
+  .grid--rooms, .grid--amenities { grid-template-columns: repeat(3, 1fr); }
+  .hero-inner { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+  .search-card .form-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-main { grid-template-columns: 1.5fr 1fr 1fr 1.3fr; }
+  .grid--reviews { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* >= 1440px: wide displays */
+@media (min-width: 1440px) {
+  :root { --container: 80rem; }
+  .hero { min-height: 50rem; }
+}
+
+/* Small phones: 360px and below */
+@media (max-width: 360px) {
+  .brand-tag { display: none; }
+  .btn { padding-inline: 1.1rem; }
+  .book-bar p { font-size: 0.8rem; }
+}
+
+/* Users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Print: clean policies and booking confirmations */
+@media print {
+  .site-header, .book-bar, .nav-toggle, .offer-banner, .site-footer .footer-social { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  body { background: #fff; padding: 0; }
+  a { color: inherit; }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Room Details | Joyce Hotel</title>
+  <meta name="description" content="Room size, bed, view, in-room amenities and photos at Joyce Hotel.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="room-title">
+      <div class="container stack">
+        <p><a href="rooms.html">Back to all rooms</a></p>
+        <h1 id="room-title" data-room-title>Room details</h1>
+        <p class="lead" data-room-tagline></p>
+      </div>
+    </section>
+
+    <!-- Filled by main.js from config.js using ?room=<id> in the address, e.g. room-details.html?room=deluxe -->
+    <section class="section" aria-label="Room information">
+      <div class="container" data-render="room-detail"></div>
+    </section>
+
+    <section class="section section--sage" aria-labelledby="others-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="others-title">Other rooms you may like</h2>
+        </div>
+        <div class="grid grid--rooms" data-other-rooms></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

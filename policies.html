@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Policies and Terms of Service | Joyce Hotel</title>
+  <meta name="description" content="Refund and cancellation policy, terms of service and privacy notice for Joyce Hotel. Clear, fair rules that protect both the guest and the hotel.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- REVIEW BEFORE LAUNCH.
+       review it against the hotel's licences, insurance and payment arrangements. All numbers live in assets/js/config.js. -->
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container stack">
+        <h1 id="page-title">Policies and Terms</h1>
+        <p class="lead">Clear rules that protect both our guests and the hotel. Version <span data-cfg="policy.version"></span>, effective <span data-cfg="policy.effectiveDate"></span>.</p>
+        <p class="policy-nav">
+          <a class="btn btn--ghost" href="#refunds">Refunds and cancellations</a>
+          <a class="btn btn--ghost" href="#terms">Terms of service</a>
+          <a class="btn btn--ghost" href="#privacy">Privacy notice</a>
+          <a class="btn btn--ghost" href="#direct-booking">Direct-booking offer</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="glance-title">
+      <div class="container">
+        <div class="form-card form-card--wide">
+          <h2 id="glance-title">Key terms at a glance</h2>
+          <ul class="spec-list mt-2" role="list">
+            <li><span>Currency</span><strong>Ugandan shillings (UGX) only</strong></li>
+            <li><span>Deposit to confirm</span><strong><span data-cfg="booking.depositPercent"></span>% of the total booking value</strong></li>
+            <li><span>Free cancellation</span><strong><span data-cfg="booking.freeCancelHours"></span> hours or more before check-in</strong></li>
+            <li><span>Late cancellation</span><strong><span data-cfg="booking.lateCancelRefundPercent"></span>% of the deposit refunded, until <span data-cfg="booking.noRefundHours"></span> hours before check-in</strong></li>
+            <li><span>No-show or inside <span data-cfg="booking.noRefundHours"></span> hours</span><strong>No refund</strong></li>
+            <li><span>VAT</span><strong><span data-cfg="booking.taxPercent"></span>% added to room rates and extras</strong></li>
+            <li><span>Check-in / check-out</span><strong>From <span data-cfg="hotel.checkInTime"></span> / by <span data-cfg="hotel.checkOutTime"></span></strong></li>
+            <li><span>Refund processing</span><strong>Within <span data-cfg="policy.refundDays"></span> business days</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 1. REFUNDS AND CANCELLATIONS ===================== -->
+    <section class="section section--sage" id="refunds" aria-labelledby="refunds-title">
+      <div class="container prose">
+        <h2 id="refunds-title">1. Refund and cancellation policy</h2>
+        <p>This policy forms part of the binding agreement between <span data-cfg="hotel.legalName"></span> (the &ldquo;Hotel&rdquo;) and the person making the booking (the &ldquo;Guest&rdquo;). It applies equally to every booking, is applied consistently, and is not open to negotiation or waiver by any member of staff.</p>
+
+        <p><strong>1.1 Definitions.</strong> &ldquo;Booking Confirmation&rdquo; means the written confirmation issued by the Hotel. &ldquo;Booking Value&rdquo; means the total of room charges, extras and VAT shown in the Booking Confirmation. &ldquo;Deposit&rdquo; means <span data-cfg="booking.depositPercent"></span>% of the Booking Value. &ldquo;Cancellation Notice&rdquo; means written notice sent to the Hotel&rsquo;s published email address or WhatsApp number, effective when received by the Hotel, and measured against the check-in time of <span data-cfg="hotel.checkInTime"></span> on the arrival date.</p>
+
+        <p><strong>1.2 Formation of contract.</strong> A reservation request submitted through this website is an offer only. A binding contract arises when the Hotel issues a Booking Confirmation and the Deposit has been received in cleared funds. The Hotel may decline a request or release the room if the Deposit is not received within twenty-four (24) hours of the Hotel&rsquo;s request for payment.</p>
+
+        <p><strong>1.3 Cancellation by the Guest.</strong> The following scale applies. The Deposit is a genuine pre-estimate of the Hotel&rsquo;s loss and is not a penalty.</p>
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">Cancellation scale and refunds</caption>
+            <thead>
+              <tr>
+                <th scope="col">Cancellation Notice received</th>
+                <th scope="col">Refund to the Guest</th>
+                <th scope="col">Entitlement of the Hotel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-cfg="booking.freeCancelHours"></span> hours or more before check-in</td>
+                <td>100% of the Deposit</td>
+                <td>Nothing further is payable by the Guest</td>
+              </tr>
+              <tr>
+                <td>Less than <span data-cfg="booking.freeCancelHours"></span> hours but at least <span data-cfg="booking.noRefundHours"></span> hours before check-in</td>
+                <td><span data-cfg="booking.lateCancelRefundPercent"></span>% of the Deposit</td>
+                <td>Retains the balance of the Deposit as liquidated damages</td>
+              </tr>
+              <tr>
+                <td>Less than <span data-cfg="booking.noRefundHours"></span> hours before check-in, or failure to arrive (no-show)</td>
+                <td>No refund</td>
+                <td>Retains the Deposit and may charge the balance of the first night&rsquo;s room rate and VAT</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>1.4 Non-refundable rates.</strong> A booking made at a rate described as non-refundable, promotional or prepaid is not eligible for any refund, credit or change of dates, whenever notice is given.</p>
+        <p><strong>1.5 Changes to a booking.</strong> One (1) change of dates or room type is permitted free of charge if requested in writing at least <span data-cfg="booking.freeCancelHours"></span> hours before check-in and subject to availability. Any difference in rate is payable by the Guest. Further changes, and changes requested later, are treated as a cancellation under clause 1.3 followed by a new booking at the prevailing rate.</p>
+        <p><strong>1.6 No-show and late arrival.</strong> Unless the Guest has notified the Hotel of a late arrival, the Hotel may release the room if the Guest has not arrived by 12:00 noon on the day after the stated arrival date, and clause 1.3 (third row) applies. The Guest remains liable for the whole stay if the room is held at the Guest&rsquo;s request.</p>
+        <p><strong>1.7 Early departure.</strong> Nights not used because the Guest departs before the stated check-out date are non-refundable.</p>
+
+        <p><strong>1.8 Cancellation or inability to perform by the Hotel.</strong> If the Hotel cancels a confirmed booking for any reason other than force majeure or breach by the Guest, the Hotel shall refund all sums paid within <span data-cfg="policy.refundDays"></span> business days and shall use reasonable endeavours to secure alternative accommodation of a comparable standard. This refund and those endeavours are the Guest&rsquo;s sole remedy for such cancellation.</p>
+        <p><strong>1.9 Force majeure.</strong> Neither party is liable for failure or delay caused by events beyond its reasonable control, including natural disaster, epidemic, war, civil unrest, terrorism, fire, utility failure, or lawful government order (&ldquo;Force Majeure&rdquo;). Where Force Majeure prevents the Hotel from providing accommodation, the Guest may elect a refund of the unused portion or a credit valid for <span data-cfg="policy.creditMonths"></span> months. Where Force Majeure prevents the Guest from travelling, the Guest may, on written evidence, elect a change of dates or a credit valid for <span data-cfg="policy.creditMonths"></span> months, and is otherwise subject to clause 1.3.</p>
+        <p><strong>1.10 How refunds are paid.</strong> Refunds are paid in UGX to the original payment method or mobile money account within <span data-cfg="policy.refundDays"></span> business days after the Hotel receives a valid Cancellation Notice or becomes obliged to refund. Refunds include a proportionate share of VAT where VAT has been collected. Bank, card and mobile money transaction charges incurred in processing a refund are deducted unless the refund arises from the Hotel&rsquo;s default. No interest is payable.</p>
+        <p><strong>1.11 Disputed payments.</strong> The Guest agrees to raise any payment query with the Hotel in writing before initiating a chargeback or reversal. The Hotel may recover from the Guest any costs reasonably incurred in responding to a chargeback that is found to be unjustified.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 2. TERMS OF SERVICE ===================== -->
+    <section class="section" id="terms" aria-labelledby="terms-title">
+      <div class="container prose">
+        <h2 id="terms-title">2. Terms of service</h2>
+        <p>By submitting a reservation request, checking in or using this website, the Guest accepts these terms, the refund and cancellation policy in clause 1 and the privacy notice in clause 3. These terms apply uniformly to all guests and may be varied only by a written instrument signed by the Hotel&rsquo;s General Manager.</p>
+
+        <p><strong>2.1 Eligibility.</strong> The person making a booking must be at least <span data-cfg="policy.minAge"></span> years old, have legal capacity to contract, and provide accurate and complete information. The booking party is jointly responsible for the conduct of every person in the party.</p>
+        <p><strong>2.2 Rates, taxes and payment.</strong> All prices are quoted and payable in Ugandan shillings (UGX). Rates are per room, per night, and exclude VAT, which is added at <span data-cfg="booking.taxPercent"></span>% in accordance with Ugandan law. The Deposit is due on request and the balance is payable on or before check-in, unless the Booking Confirmation states otherwise. Accepted methods are mobile money, bank transfer and payment card. Exchange-rate differences and third-party transaction charges are borne by the Guest. No payment card details are collected through this website.</p>
+        <p><strong>2.3 Incidental deposit.</strong> At check-in the Hotel may require an incidental deposit of <span data-cfg="policy.incidentalDeposit"></span> per room, refundable at check-out after deduction of any sums due to the Hotel.</p>
+        <p><strong>2.4 Check-in and check-out.</strong> Check-in is from <span data-cfg="hotel.checkInTime"></span> and check-out is by <span data-cfg="hotel.checkOutTime"></span>. Every adult guest must present a valid passport or government-issued photo identification, and the Hotel will register guests as required by law. The Hotel may refuse accommodation to any person who cannot do so. Early check-in and late check-out are subject to availability. Departure after <span data-cfg="hotel.checkOutTime"></span> without prior written agreement is charged at <span data-cfg="policy.lateCheckoutPercent"></span>% of the room rate until <span data-cfg="policy.lateCheckoutUntil"></span> and at the full nightly rate thereafter.</p>
+        <p><strong>2.5 Occupancy.</strong> The number of adults, children and total guests in a room must not exceed the maximum published for that room type. The Hotel may refuse to accommodate any excess persons without refund. Visitors who are not registered guests may not remain in guest rooms between <span data-cfg="policy.quietHours"></span>.</p>
+        <p><strong>2.6 Conduct and house rules.</strong> The Guest shall not smoke or vape in rooms or enclosed areas, shall not engage in unlawful activity, and shall not cause nuisance or disturbance, particularly during quiet hours (<span data-cfg="policy.quietHours"></span>). Pets are not permitted, other than recognised assistance animals. A specialist cleaning charge of <span data-cfg="policy.smokingFee"></span> applies where smoking is detected in a room. Dangerous, illegal or flammable items are prohibited.</p>
+        <p><strong>2.7 Termination of the stay.</strong> The Hotel may terminate a stay immediately and without refund where a guest materially breaches these terms, endangers any person or property, or behaves in a manner that is abusive or unlawful. The Hotel may seek police assistance where necessary.</p>
+        <p><strong>2.8 Damage and loss.</strong> The Guest is liable for loss of or damage to the Hotel&rsquo;s property caused by any person in the Guest&rsquo;s party, other than fair wear and tear, at repair or replacement cost, and authorises the Hotel to apply the incidental deposit or charge the Guest&rsquo;s payment method accordingly.</p>
+        <p><strong>2.9 Limitation of the Hotel&rsquo;s liability.</strong> The Hotel will exercise reasonable care and skill. To the fullest extent permitted by law, the Hotel is not liable for indirect or consequential loss, loss of profit, or loss of or damage to valuables not deposited in the Hotel&rsquo;s safe, and its aggregate liability arising from a stay is limited to the amount paid for that stay. Nothing in these terms excludes or limits liability for death or personal injury caused by negligence, for fraud or fraudulent misrepresentation, or for any liability that cannot lawfully be excluded. Vehicles and their contents are parked at the owner&rsquo;s risk.</p>
+        <p><strong>2.10 Indemnity.</strong> The Guest shall indemnify the Hotel against loss, damage, claims and reasonable costs arising from the Guest&rsquo;s breach of these terms or from the unlawful or negligent acts of any person in the Guest&rsquo;s party.</p>
+        <p><strong>2.11 Website use and accuracy.</strong> Content, images and descriptions on this website are provided for information and are protected by copyright and other intellectual property rights. Prices and availability are confirmed only in the Booking Confirmation. The Hotel does not warrant that the website will be uninterrupted or error-free.</p>
+        <p><strong>2.12 Notices.</strong> Notices to the Hotel must be sent to the email address or WhatsApp number published on this website. Notices to the Guest may be sent to the contact details given at booking. Electronic notices are treated as received when sent, unless the sender is notified of non-delivery.</p>
+        <p><strong>2.13 General.</strong> These terms and the Booking Confirmation constitute the entire agreement between the parties and supersede prior representations. If a provision is held invalid or unenforceable, the remainder continues in force. A failure or delay in enforcing a right is not a waiver of it. The Guest may not assign the booking without the Hotel&rsquo;s written consent. In the event of conflict, the Booking Confirmation prevails over these terms for the matters it expressly addresses.</p>
+        <p><strong>2.14 Governing law and disputes.</strong> These terms are governed by the laws of the Republic of Uganda. The parties shall first attempt in good faith to resolve any dispute by written notice and negotiation within fourteen (14) days. Failing resolution, the courts of Uganda have exclusive jurisdiction, and each party submits to that jurisdiction.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 3. PRIVACY NOTICE ===================== -->
+    <section class="section section--sage" id="privacy" aria-labelledby="privacy-title">
+      <div class="container prose">
+        <h2 id="privacy-title">3. Privacy notice</h2>
+        <p>This notice explains how <span data-cfg="hotel.legalName"></span> (the &ldquo;Data Controller&rdquo;) collects and processes personal data in accordance with the Data Protection and Privacy Act, 2019 of Uganda.</p>
+        <p><strong>3.1 Data we collect.</strong> Name, email address, telephone or WhatsApp number, stay details, the ages of children, special requests, identification details recorded at check-in, and payment references. We do not collect payment card numbers through this website.</p>
+        <p><strong>3.2 Purposes and lawful basis.</strong> We process this data to handle enquiries and reservations (consent and performance of a contract), to meet legal obligations such as guest registration and tax records, and to protect our legitimate interests in security, fraud prevention and service quality.</p>
+        <p><strong>3.3 Disclosure.</strong> We share data only where necessary with payment and mobile money providers, communication services you choose to use (such as WhatsApp or email), professional advisers, and public authorities where required by law. We do not sell personal data. Where data is processed outside Uganda, for example by a messaging provider, we take reasonable steps to ensure it is protected.</p>
+        <p><strong>3.4 Retention.</strong> We keep booking and accounting records for <span data-cfg="policy.retention"></span> after the end of the stay, or longer where the law requires, and then delete or anonymise them.</p>
+        <p><strong>3.5 Your rights.</strong> You may request access to, correction of, or deletion of your personal data, object to or restrict processing, and withdraw consent at any time, subject to legal retention duties. Withdrawal does not affect processing already carried out. You may complain to the Personal Data Protection Office of Uganda.</p>
+        <p><strong>3.6 Security.</strong> We use appropriate technical and organisational measures to protect personal data against loss, misuse and unauthorised access. Reservation requests prepared on this website are held on your own device until you send them.</p>
+        <p><strong>3.7 Cookies and storage.</strong> This website does not use advertising or tracking cookies. It uses your browser&rsquo;s local storage only to keep your reservation request on your device.</p>
+        <p><strong>3.8 Children.</strong> We collect children&rsquo;s ages only to apply occupancy rules and rates, and only from a parent or guardian.</p>
+        <p><strong>3.9 Contact.</strong> For privacy requests write to <a href="#" data-link="email" data-cfg="hotel.email"></a> or call <a href="#" data-link="phone" data-cfg="hotel.phone"></a>.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. DIRECT BOOKING OFFER ===================== -->
+    <section class="section" id="direct-booking" aria-labelledby="direct-title">
+      <div class="container prose">
+        <h2 id="direct-title">4. Direct-booking offer terms</h2>
+        <p><strong>4.1 Best rate guarantee.</strong> If, within twenty-four (24) hours of booking directly with the Hotel, the Guest finds a lower publicly available rate for the same room type, dates, occupancy and cancellation conditions on another website, the Guest must notify the Hotel in writing with evidence, and the Hotel will match that rate. The guarantee excludes member-only, opaque, corporate, group, package and promotional rates, and rates that are unavailable for booking.</p>
+        <p><strong>4.2 Welcome drink.</strong> One complimentary welcome drink is offered per booked room, per stay, to registered adult guests. It is non-transferable, has no cash value, may not be combined with other offers, and may be withdrawn or varied by the Hotel.</p>
+        <p><strong>4.3 Misuse.</strong> The Hotel may withdraw these benefits and cancel affected bookings where an offer is abused or claimed fraudulently.</p>
+      </div>
+    </section>
+
+    <section class="section section--forest" aria-labelledby="cta-title">
+      <div class="container text-center stack">
+        <h2 id="cta-title">Questions about these terms?</h2>
+        <p class="lead" style="margin-inline: auto; color: var(--sage-100);">Our team will gladly explain any clause before you book.</p>
+        <p>
+          <a class="btn btn--soft" href="booking.html">Book your stay</a>
+          <a class="btn btn--ghost" href="#" data-link="whatsapp" style="color: var(--white); border-color: var(--white);">Chat on WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

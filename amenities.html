@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amenities and Services | Joyce Hotel</title>
+  <meta name="description" content="See what is included with your stay at Joyce Hotel, including free Wi-Fi and parking, and which services carry an extra charge such as breakfast and airport shuttle.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container stack">
+        <h1 id="page-title">Amenities and services</h1>
+        <p class="lead">Clear information on what is included and what carries an extra charge, so you can plan with confidence.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="included-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="included-title">Included with your stay</h2>
+          <p class="lead">No extra cost for any of these.</p>
+        </div>
+        <div class="grid grid--amenities" data-render="amenities" data-filter="included"></div>
+      </div>
+    </section>
+
+    <section class="section section--sage" aria-labelledby="extra-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="extra-title">Available for an extra charge</h2>
+          <p class="lead">Add these when you book, or ask at reception during your stay.</p>
+        </div>
+        <div class="grid grid--amenities" data-render="amenities" data-filter="paid"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="know-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="know-title">Good to know</h2>
+        </div>
+        <div class="prose">
+          <ul>
+            <li>Parking is free for guests and subject to availability. Please tell us at booking if you will arrive by car.</li>
+            <li>Airport shuttle must be reserved in advance. Contact us with your flight details.</li>
+            <li>Breakfast can be added at booking or paid for at the restaurant on the day.</li>
+            <li>Check-in is from <span data-cfg="hotel.checkInTime"></span> and check-out is by <span data-cfg="hotel.checkOutTime"></span>. Ask us about early check-in or late check-out.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--forest" aria-labelledby="cta-title">
+      <div class="container text-center stack">
+        <h2 id="cta-title">Plan your stay</h2>
+        <p class="lead" style="margin-inline: auto; color: var(--sage-100);">Questions about a service? Message the team on WhatsApp or go straight to booking.</p>
+        <p>
+          <a class="btn btn--soft" href="booking.html">Book your Stay</a>
+          <a class="btn btn--ghost" href="#" data-link="whatsapp" style="color: var(--white); border-color: var(--white);">Chat on WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

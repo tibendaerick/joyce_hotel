@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rooms and Suites | Joyce Hotel</title>
+  <meta name="description" content="Compare Standard, Deluxe, Executive rooms and the Joyce Suite. Bed sizes, room sizes, views and in-room amenities, with rates per night.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container stack">
+        <h1 id="page-title">Rooms and Suites</h1>
+        <p class="lead">Compare bed sizes, room sizes, views and in-room extras, then book direct for the best rate.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catalog-title">
+      <div class="container">
+        <h2 id="catalog-title" class="visually-hidden">All Rooms</h2>
+        <div class="tabs" data-room-tabs aria-label="Filter rooms by category"></div>
+        <div class="grid grid--rooms" data-render="rooms" aria-live="polite"></div>
+        <p class="field-hint mt-3">Rates are per room, per night. A <span data-cfg="booking.taxPercent"></span>% tax is added at booking.</p>
+      </div>
+    </section>
+
+    <section class="section section--sage" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="compare-title">Compare at a Glance</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">Comparison of Joyce Hotel room types</caption>
+            <thead>
+              <tr>
+                <th scope="col">Room</th>
+                <th scope="col">Bed</th>
+                <th scope="col">Size</th>
+                <th scope="col">View</th>
+                <th scope="col">Sleeps</th>
+                <th scope="col">From, per night</th>
+              </tr>
+            </thead>
+            <tbody data-render="room-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--forest" aria-labelledby="cta-title">
+      <div class="container text-center stack">
+        <h2 id="cta-title">Ready to Reserve?</h2>
+        <p class="lead" style="margin-inline: auto; color: var(--sage-100);">Book direct for a rate guarantee and a free welcome drink.</p>
+        <p><a class="btn btn--soft" href="booking.html">Book your Stay</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

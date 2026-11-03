@@ -1,0 +1,54 @@
+<!-- Joyce Hotel: components/footer.html
+     Loaded into every page by main.js. All details come from config.js. -->
+<footer class="site-footer">
+  <div class="container footer-main">
+
+    <div class="footer-col">
+      <p class="footer-brand" data-cfg="hotel.name"></p>
+      <p data-cfg="hotel.tagline"></p>
+      <div class="footer-social" data-render="social"></div>
+    </div>
+
+    <nav class="footer-col" aria-label="Footer quick links">
+      <h3>Explore</h3>
+      <ul role="list" data-render="footer-links"></ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Guest information">
+      <h3>Guest Information</h3>
+      <ul role="list">
+        <li><a href="booking.html">Book your Stay</a></li>
+      </ul>
+      <ul role="list" data-render="policy-links" style="margin-top: 0.5rem;"></ul>
+    </nav>
+
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <address class="footer-address">
+        <span data-cfg="hotel.addressLine1"></span>
+        <span data-cfg="hotel.addressLine2"></span>
+        <a href="#" data-link="map">View on Map</a>
+        <a href="#" data-link="phone" data-cfg="hotel.phone"></a>
+        <a href="#" data-link="email" data-cfg="hotel.email"></a>
+        <a href="#" data-link="whatsapp">Chat with Us</a>
+        <span data-cfg="hotel.receptionHours"></span>
+        <span>Check-in from <span data-cfg="hotel.checkInTime"></span>, Check-out by <span data-cfg="hotel.checkOutTime"></span></span>
+      </address>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>
+        &copy; <span data-cfg="hotel.copyrightYears"></span>
+        <span data-cfg="hotel.name"></span>. All rights reserved.
+      </p>
+      <p class="footer-credit">
+        Powered by <span data-cfg="brand.name"></span>.
+        &copy; <span data-cfg="brand.copyrightYear"></span> <span data-cfg="brand.name"></span>.
+        <a href="#" data-link="nexup">Tap on Us</a>
+      </p>
+    </div>
+  </div>
+</footer>

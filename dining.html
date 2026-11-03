@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dining and Events | Joyce Hotel</title>
+  <meta name="description" content="Restaurant, lounge bar and breakfast at Joyce Hotel, with menus, opening hours and table reservations, plus meeting rooms and event spaces with capacity details.">
+  <meta name="theme-color" content="#264a38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container stack">
+        <h1 id="page-title">Dining and events</h1>
+        <p class="lead">Good food, a relaxed bar and spaces for meetings, weddings and celebrations, all under one roof.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="outlets-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="outlets-title">Where to eat and drink</h2>
+          <p class="lead">Opening hours for every outlet. Reserve a table in a few taps.</p>
+        </div>
+        <div class="grid grid--amenities" data-render="dining-outlets"></div>
+        <p class="mt-3"><a class="btn btn--primary" href="#" data-link="table">Reserve a table on WhatsApp</a></p>
+      </div>
+    </section>
+
+    <section class="section section--sage" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="menu-title">Menu highlights</h2>
+          <p class="lead">Menus change with the season. Please tell your server about any allergies or dietary needs.</p>
+        </div>
+        <div class="grid grid--rooms" data-render="menu"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="events-title">Meetings, weddings and celebrations</h2>
+          <p class="lead">Flexible spaces with high-speed Wi-Fi, presentation equipment and an events team to look after the details.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">Event space capacities by room layout</caption>
+            <thead>
+              <tr>
+                <th scope="col">Space</th>
+                <th scope="col">Size</th>
+                <th scope="col">Theatre</th>
+                <th scope="col">Classroom</th>
+                <th scope="col">Banquet</th>
+                <th scope="col">Cocktail</th>
+              </tr>
+            </thead>
+            <tbody data-render="event-table"></tbody>
+          </table>
+        </div>
+        <p class="field-hint mt-2">Theatre: rows of chairs. Classroom: tables and chairs facing the front. Banquet: seated at round tables. Cocktail: standing reception. N/A means that layout is not available in the space.</p>
+        <div class="prose mt-3">
+          <h3>What is available</h3>
+          <ul>
+            <li>Projector, PA system, Flip chart, Markers, microphone and sound system on request</li>
+            <li>Catering packages from coffee breaks to full banquets</li>
+            <li>Guest room blocks for wedding parties and corporate groups</li>
+            <li>A dedicated events coordinator from first enquiry to the day itself</li>
+          </ul>
+        </div>
+        <p class="mt-3"><a class="btn btn--primary" href="#" data-link="events">Enquire about an event on WhatsApp</a></p>
+      </div>
+    </section>
+
+    <section class="section section--forest" aria-labelledby="cta-title">
+      <div class="container text-center stack">
+        <h2 id="cta-title">Stay with Us</h2>
+        <p class="lead" style="margin-inline: auto; color: var(--sage-100);">Book direct for a rate guarantee and a free welcome drink.</p>
+        <p><a class="btn btn--soft" href="booking.html">Book your Stay</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

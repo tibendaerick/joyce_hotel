@@ -1,0 +1,30 @@
+<!-- Joyce Hotel: components/header.html
+     Loaded into every page by main.js. Nav links come from config.js (nav).
+     Contract with main.js: .nav-toggle[aria-controls="nav-menu"] and ul#nav-menu. -->
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="offer-banner">
+  <div class="container">
+    <span data-cfg="offer.text"></span>
+    <a href="booking.html" data-cfg="offer.cta"></a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Joyce Hotel, home page">
+      <span class="brand-name" data-cfg="hotel.name"></span>
+      <span class="brand-tag" data-cfg="hotel.tagline"></span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul id="nav-menu" class="nav-menu" role="list" data-render="nav-links"></ul>
+    </nav>
+
+    <a class="btn btn--primary nav-cta" href="booking.html">Book your stay</a>
+  </div>
+</header>
